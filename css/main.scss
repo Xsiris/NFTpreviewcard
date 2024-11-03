@@ -1,0 +1,80 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --bs-body-font-family: 'Outfit';
+}
+
+.mainBg{
+    background-color: hsl(217, 54%, 11%);
+}
+
+.cardBg{
+    background-color: hsl(216, 50%, 16%);
+}
+
+.lineColor{
+    color: hsl(215, 32%, 27%);
+}
+
+.colorSoftBlue{
+    color: hsl(215, 51%, 70%);
+}
+
+.colorCyan{
+    color: hsl(178, 100%, 50%);
+}
+
+.bgCyan{
+    background-color: hsl(178, 100%, 50%);
+}
+
+.avatarWidh{
+    width:40px;
+}
+
+.linkHover{
+    a, h1{
+        text-decoration: none;
+        color: white;
+    }
+    :hover{
+        color: hsl(178, 100%, 50%);
+    }
+}
+
+.imgHover:hover{
+    opacity: 35%;
+    cursor:pointer;
+}
+
+.viewImage{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.imgParent:hover{
+    > .viewImage{
+        opacity: 100%;
+        cursor:pointer;
+    }
+    > .imgHover{
+        opacity: 35%;
+        cursor:pointer;
+    }
+}
+
+.cryptoCard{
+    max-width: 350px;
+}
